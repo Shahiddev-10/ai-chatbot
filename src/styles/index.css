@@ -1,0 +1,483 @@
+@import "components.css";
+
+@tailwind base;
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    text-rendering: geometricPrecision;
+
+    @apply bg-white text-gray-800 dark:bg-black-500 dark:text-gray-300 font-sans antialiased;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+input:-webkit-autofill::first-line {
+-webkit-text-fill-color: #fff;
+background-color:transparent!important;
+transition: background-color 5000s ease-in-out 0s;
+font-size:100%!important; 
+margin:0px!important;
+font-family:"Outfit"!important;
+  
+}
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:transparent;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    padding:0px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+   padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+       border: none;
+}
+.is-sticky {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    background-color: #fff !important;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+  @-moz-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+.hero-image-shadow {
+    box-shadow: 0 0 800px 0 var(--tw-shadow-color);
+}
+
+/*
+We hide the emulator warning at the bottom of the page.
+Please remove the following class if you want to display it
+ */
+.firebase-emulator-warning {
+    display: none;
+}
+.header-background {
+    background-image:url("/assets/images/background.png");
+    background-color:#000D21;
+    position: relative;
+    z-index:15;
+    background-size:cover;
+    background-position: center bottom;
+}
+/* .header-background:before
+{
+    content:'';
+   
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background-size: cover;
+    background-position:bottom center;
+} */
+div#home,div#how-it-works,div#pricing,div#features,div#faqs,div#waitlist,footer#contact-us,div#about,div#refund,div#emails,div#conditions,div#queries
+{
+    scroll-margin-top: 100px;
+}
+.drop-back
+{
+    background: linear-gradient(180deg, rgba(0, 13, 33, 0.00) 0%, #000D21 100%);
+}
+.drop-back1
+{
+    background: linear-gradient(180deg,  #000D21 100%,rgba(0, 13, 33, 0.00) 0%);
+}
+
+.header-background .container
+{
+    position:relative;
+    z-index:1;
+}
+
+.ns-b input{
+    border:0px!important;
+}
+.logo-con svg{
+    height:41px;
+}
+.price-background,
+.feature-background {
+    background: #000D21;
+    position: relative;
+    z-index: 0;
+}
+
+.price-background:before {
+    content: '';
+    background: linear-gradient(181deg, #000D21, transparent), url(/assets/images/background.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center bottom;
+    z-index: -1;
+}
+
+.feature-background:after {
+    content: '';
+    background: url("/assets/images/background.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center bottom;
+    top: 0px;
+    z-index: -1;
+}
+
+
+.set-background,.about-background {
+    background: #000D21;
+    position:relative;
+}
+
+/*.about-background:before
+{
+    content:'';
+    background: linear-gradient(149.2deg, #2056BE 15.38%, #467FED 86.37%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    z-index:-1;
+}*/
+.fe-icon {
+    width: 130px;
+    height: 130px;
+}
+
+.tw-icon {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.feature-background .tw-icon {
+    position: relative
+}
+
+.feature-background .grid .group:nth-child(1) .tw-icon,
+.feature-background .grid .group:nth-child(6) .tw-icon {
+    background: #FE3464;
+}
+
+.feature-background .grid .group:nth-child(2) .tw-icon,
+.feature-background .grid .group:nth-child(4) .tw-icon {
+    background: #51B3F2;
+}
+
+.feature-background .grid .group:nth-child(3) .tw-icon,
+.feature-background .grid .group:nth-child(5) .tw-icon {
+    background: #FF9480;
+}
+
+.feature-background .grid .tw-icon:before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+}
+
+.feature-background .grid .group:nth-child(1) .tw-icon:before,
+.feature-background .grid .group:nth-child(6) .tw-icon:before {
+    border: 1px solid #FE3464;
+}
+
+.feature-background .grid .group:nth-child(2) .tw-icon:before,
+.feature-background .grid .group:nth-child(4) .tw-icon:before {
+    border: 1px solid #51B3F2;
+}
+
+.feature-background .grid .group:nth-child(3) .tw-icon:before,
+.feature-background .grid .group:nth-child(5) .tw-icon:before {
+    border: 1px solid #FF9480;
+}
+
+.footer-logo svg {
+    width: 245px
+}
+.logo-svg svg
+{
+    width:24px;
+}
+
+.prc h6 {
+    opacity: 0;
+}
+.img-blur1
+{
+    z-index:1;
+    position:relative;
+}
+.img-blur::before
+{
+    content:'';
+    position: absolute;
+    width: 579px;
+    height: 579px;
+    left: -180px;
+    top: 0px;
+    background: #092145;
+    filter: blur(112px);
+}
+.img-blur1 h1
+{
+position:relative;
+}
+.img-blur1 h1::before
+{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    left: 0px;
+    top: 0px;
+    background: #001129;
+    filter: blur(154px);
+    z-index:-1;
+}
+.checkbox {
+    width: 100%;
+    position: relative;
+    display: block;
+    flex:1;
+  }
+  .checkbox label {
+    position: relative;
+    min-height: 30px;
+    display: block;
+    padding-left: 32px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    font-family:"Outfit";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #D1D5DB;
+  }
+  .checkbox label span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .checkbox label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #2F7934;
+  }
+  .checkbox label:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #2F7934;
+    border-left: 2px solid #2F7934;
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+  }
+  .checkbox input[type=checkbox] {
+    width: auto;
+    opacity: 1e-8;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+  }
+  .checkbox input[type=checkbox]:checked ~ label:before {
+    border: 2px solid #2F7934;
+  }
+  .checkbox input[type=checkbox]:checked ~ label:after {
+    transform: rotate(-45deg) scale(1);
+  }
+  .checkbox input[type=checkbox]:focus + label::before {
+    outline: 0;
+  }
+  .signup-col input{
+    width:100%;
+  }
+
+@media (min-width:320px) and (max-width:767px) {
+    .header-logo svg {
+        width:75%;
+    }
+    .header-logo .hamburger
+    {
+      width:15%;
+    }
+    .fe-icon svg {
+        width: 45px;
+    }
+    .img-blur::before
+    {
+        width:100%;
+    }
+    .fe-icon,
+    .tw-icon,
+    .feature-background .grid .tw-icon:before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .prc {
+        margin-top: 0px !important;
+    }
+    #demo-button::after
+    {
+        right: -60px!important;
+        width: 60px!important;
+        height: 60px!important;
+    }
+    .img-blur1::before
+    {
+    height:100%;
+    }
+    .header-background
+    {
+    z-index:40
+    }
+    .react-player
+    {
+        width:100%!important;
+        height:200px!important
+    }
+    .react-player .play-icon
+    {
+        width:50px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .prc {
+        margin-top: 0px !important;
+    }
+
+    .footer-logo svg {
+        width: 200px;
+    }
+    .img-blur::before
+    {
+        width:100%;
+    }
+    .react-player
+    {
+        width:100%!important;
+        height:400px!important
+    }
+    .react-player .play-icon
+    {
+        width:50px;
+    }
+}
+@media (min-width:1024px) and (max-width:1280px) {
+    .react-player
+    {
+        width:80%!important;
+        height:400px!important
+    }
+    .react-player .play-icon
+    {
+        width:50px;
+    }
+}
+
+#demo-button {
+    position: relative;
+}
+
+#demo-button::after {
+    content: "";
+    background-image: url(/assets/images/attractive-arrow.png);
+    -webkit-transform: translateX(15%);
+    transform: translateX(15%);
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    display: block;
+    right: -50%;
+    z-index: 12;
+    background-size: contain;
+    background-repeat: no-repeat;
+    ;
+}
